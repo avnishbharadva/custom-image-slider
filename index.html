@@ -8,6 +8,7 @@
     <title>Custom Image Slider</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,32 +20,40 @@
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modalBody">
+    <center>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width: 900px;height: 700px;margin: auto;">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <center>
+                        <div class="modal-body" id="modalBody" style="margin-bottom: 100px;">
 
-                </div>
-                <div class="modal-footer">
-                    <div class="m-auto">
-                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                        <h2>
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                            <i class="fa-solid fa-magnifying-glass-minus"></i>
-                            <button class="btn" onclick="pre_pic()"><i class="fa-solid fa-circle-chevron-left"></i></button>
-                            <button class="btn" onclick="next_pic()"><i class="fa-solid fa-circle-chevron-right"></i></button>
-                            <i class="fa-solid fa-rotate-left"></i>
-                            <i class="fa-solid fa-rotate-right"></i>
-                        </h2>
+                        </div>
+                    </center>
+                    <div class="modal-footer" style="position: fixed;margin-left: 270px;margin-top: -10px;">
+                        <div class="m-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button class="btn" onclick="zoomIn()" style="font-size: xx-large;"><i
+                                    class="fa-solid fa-magnifying-glass-plus"></i></button>
+                            <button class="btn" onclick="zoomOut()" style="font-size: xx-large;"><i
+                                    class="fa-solid fa-magnifying-glass-minus"></i></button>
+                            <button class="btn" onclick="pre_pic()" style="font-size: xx-large;"><i
+                                    class="fa-solid fa-circle-chevron-left"></i></button>
+                            <button class="btn" onclick="next_pic()" style="font-size: xx-large;"><i
+                                    class="fa-solid fa-circle-chevron-right"></i></button>
+                            <button class="btn" onclick="rotateLeft()" style="font-size: xx-large;"><i
+                                    class="fa-solid fa-rotate-left"></i></button>
+                            <button class="btn" onclick="rotateRight()" style="font-size: xx-large;"><i
+                                    class="fa-solid fa-rotate-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </center>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
