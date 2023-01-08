@@ -41,7 +41,7 @@ const zoomIn = () => {
     let currHeight = imgBody.clientHeight;
     let currWidth = imgBody.clientWidth;
     console.log(currWidth, currHeight);
-    if (currWidth <= 820) {
+    if (currWidth <= 760) {
         imgBody.style.width = (currWidth + 30) + "px";
         imgBody.style.height = (currHeight + 15) + "px";
     }
@@ -52,8 +52,10 @@ const zoomOut = () => {
     let currHeight = imgBody.clientHeight;
     let currWidth = imgBody.clientWidth;
     // console.log(currHeight);
-    imgBody.style.width = (currWidth - 30) + "px";
-    imgBody.style.height = (currHeight - 15) + "px";
+    if (currWidth >= 165) {
+        imgBody.style.width = (currWidth - 30) + "px";
+        imgBody.style.height = (currHeight - 15) + "px";
+    }
 }
 
 const rotateLeft = () => {
