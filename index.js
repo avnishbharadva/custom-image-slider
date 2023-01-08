@@ -82,5 +82,5 @@ const showModal = (index) => {
 
 img_arr.forEach(function (item, index, arr) {
     // console.log(item);
-    img_gal.innerHTML += `<div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick="showModal(${index})"><img src="${item}" width="400px" height="300px" /></div>`;
+    img_gal.innerHTML += `<div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick="showModal(${index})"><img src="${item}" width="400px" height="300px" style="cursor:pointer;" /></div>`;
 })
